@@ -1,22 +1,26 @@
 # Solidity Analysis Agent
 
-A local AI assistant that can understand and explain smart contracts. This application runs entirely in the browser using WebLLM, with no need for server-side processing.
+A local-first AI assistant that runs entirely in your browser, capable of understanding Solidity smart contracts, identifying potential vulnerabilities, and suggesting code improvements. No server-side processing means your code stays private.
 
 <img src="/public/ss1.png" width="49%"/> <img src="/public/ss2.png" width="49%"/> 
 
 ## Features
 
-- **Local-First Processing**: All analysis happens in your browser using WebLLM - no data is sent to external servers
-- **Smart Contract Analysis**: Upload or paste Solidity code for automated security analysis
-- **Interactive Chat**: Ask natural language questions about your smart contract
-- **Code Highlighting**: Syntax highlighting for better code readability
+- **Local-First Processing**: All analysis happens in your browser using WebLLM - no data is sent to external servers, ensuring complete privacy.
+- **Deep Code Comprehension**: Understands the intricacies of your Solidity smart contracts.
+- **Automated Vulnerability Detection**: Proactively identifies common security vulnerabilities.
+- **Actionable Improvement Suggestions**: Offers concrete recommendations for optimizing gas usage, enhancing security, and improving code clarity.
+- **Smart Contract Analysis**: Upload or paste Solidity code for automated security analysis.
+- **Interactive Chat**: Ask natural language questions about your smart contract.
+- **Code Highlighting**: Syntax highlighting for better code readability.
 
 ## Use Cases
 
-- Ask questions like `What does transferFrom do?` or `Is this contract upgradeable?`
-- Get security vulnerability analysis for your smart contracts
-- Identify optimization opportunities in your code
-- Learn about smart contract best practices
+- **Security Audits**: Get a preliminary security review of your smart contracts, identifying potential vulnerabilities like reentrancy, integer overflows, and access control issues.
+- **Code Optimization**: Discover opportunities to reduce gas costs and improve the efficiency of your contract functions.
+- **Best Practice Adherence**: Learn if your contract follows established Solidity best practices and receive suggestions for alignment.
+- **Complex Logic Explanation**: Ask questions like `What does this complex function do?`, `Explain the inheritance structure`, or `Is this contract upgradeable?`
+- **Targeted Queries**: Get insights on specific parts of your code, for example, `What are the potential risks in the transferFrom function?` or `How can I make the _mint function safer?`
 
 ## Getting Started
 
@@ -57,10 +61,10 @@ The built application will be in the `dist` directory.
 
 ## How It Works
 
-1. **Upload or Paste**: Add your smart contract (Solidity code or ABI JSON)
-2. **Analyze**: The app uses WebLLM to analyze the contract and identify issues
-3. **Chat**: Ask specific questions about your contract in natural language
-4. **Review**: See detailed analysis of vulnerabilities and suggestions
+1. **Upload or Paste**: Add your smart contract (Solidity code or ABI JSON).
+2. **Analyze**: The app uses WebLLM to perform a comprehensive analysis of the contract, understanding its logic, identifying potential vulnerabilities, and pinpointing areas for improvement.
+3. **Chat & Explore**: Ask specific questions about your contract in natural language. Dive deeper into identified vulnerabilities or suggested improvements.
+4. **Review & Implement**: Examine the detailed analysis, understand the identified issues, and implement the suggested improvements to enhance your smart contract.
 
 ## Technology Stack
 
