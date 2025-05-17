@@ -2,8 +2,7 @@
 
 A local AI assistant that can understand and explain smart contracts. This application runs entirely in the browser using WebLLM, with no need for server-side processing.
 
-![SC Analysis Agent Screenshot 1](ss1.png)
-![SC Analysis Agent Screenshot 2](ss2.png)
+<img src="/public/ss1.png" width="49%"/> <img src="/public/ss2.png" width="49%"/> 
 
 ## Features
 
