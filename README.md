@@ -2,6 +2,8 @@
 
 A local AI assistant that can understand and explain smart contracts. This application runs entirely in the browser using WebLLM, with no need for server-side processing.
 
+### [Live Demo](https://usmankiani256.github.io/solidity-analysis-agent/)
+
 ![SC Analysis Agent Screenshot 1](ss1.png)
 ![SC Analysis Agent Screenshot 2](ss2.png)
 
