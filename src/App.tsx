@@ -32,7 +32,6 @@ function App() {
     null,
   );
   const [input, setInput] = useState("");
-  console.log("🚀 ~ App ~ input:", input);
   const [initError, setInitError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -48,8 +47,13 @@ function App() {
         setIsInitializing(false);
       }
     };
-
-    initLLM();
+    // @ts-ignore
+    if (!navigator.gpu) {
+      setInitError("WebGPU is unavailable, please run the app on a WebGPU enabled browser. For more details, visit https://webgpureport.org");
+      setIsInitializing(false);
+    } else {
+      initLLM();
+    }
   }, []);
 
   const handleSendMessage = async (content: string) => {
