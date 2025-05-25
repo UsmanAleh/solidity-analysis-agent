@@ -2,6 +2,12 @@ import * as webllm from "@mlc-ai/web-llm";
 import type { Message, SmartContract, AnalysisResult } from "../types";
 import type { ChatCompletionMessageParam } from "@mlc-ai/web-llm";
 
+function isSafariOrIOS(userAgent = navigator.userAgent) {
+  const isIOS = /iP(hone|od|ad)/.test(userAgent);
+  const isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
+  return isIOS || isSafari;
+}
+
 class LLMService {
   private chat: webllm.MLCEngine | null = null;
   private isInitialized = false;
@@ -16,7 +22,8 @@ class LLMService {
 
     this.initializationPromise = (async () => {
       try {
-        this.chat = await webllm.CreateMLCEngine("Qwen3-0.6B-q0f16-MLC", {
+        const model = isSafariOrIOS() ? "Qwen3-0.6B-q4f16_1-MLC" : "Qwen3-0.6B-q0f16-MLC";
+        this.chat = await webllm.CreateMLCEngine(model, {
           initProgressCallback: (progress) => {
             console.log("Model initialization progress:", progress);
           },
